@@ -3,4 +3,4 @@
 tricks:
 - watchdog.tricks.ShellCommandTrick:
     patterns: ["*.java", "*/index.js", "*.jsx"]
-    shell_command: "webpack && mvn compile && mvn exec:java"
+    shell_command: "npm run killServer && webpack && mvn compile && mvn exec:java"
