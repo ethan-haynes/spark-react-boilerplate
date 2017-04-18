@@ -7,7 +7,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "killServer": "pid=$(lsof -i:3000 -t); kill -TERM $pid || kill -KILL $pid"
+    "killServer": "lsof -i:4567 | grep LISTEN | awk '{print $2}' | xargs kill -9"
   },
   "author": "Ethan Haynes",
   "license": "MIT",

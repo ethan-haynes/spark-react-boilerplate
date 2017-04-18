@@ -18,10 +18,10 @@ public class Myapp {
     public static void main( String[] args) {
         staticFileLocation("/public");
 
-        get("/", (request, response) -> {
-            Map<String, String> models = new HashMap<>();
-            models.put("initialData", "Hello Spark/Java with React!");
-            return new ModelAndView(models, "app"); // located in resources/templates directory
-        }, new JadeTemplateEngine());
+        get("/", (request, response) ->
+            new ModelAndView(new HashMap<String,String>(){{
+              put("initialData", "Hello Spark/Java with React!");
+            }}, "app")
+        , new JadeTemplateEngine());
     }
 }

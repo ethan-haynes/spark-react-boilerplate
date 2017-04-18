@@ -1,6 +1,6 @@
 # tricks.yml
 # optional for those who watch to install watchdog globally
 tricks:
-- watchdog.tricks.ShellCommandTrick:
-    patterns: ["*.java", "*/index.js", "*.jsx"]
-    shell_command: "npm run killServer && webpack && mvn compile && mvn exec:java"
+  - watchdog.tricks.ShellCommandTrick:
+      patterns: ["*.java", "*/index.js", "*.jsx"]
+      shell_command: "npm run killServer && webpack && mvn compile && mvn exec:java"
