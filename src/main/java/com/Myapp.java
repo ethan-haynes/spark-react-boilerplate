@@ -3,15 +3,12 @@ package com.haynes;
 import static spark.Spark.get;
 import static spark.SparkBase.staticFileLocation;
 
-
 import spark.Request;
 import spark.Response;
 import spark.ModelAndView;
-import spark.TemplateEngine;
 import spark.template.jade.JadeTemplateEngine;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Myapp {
 
